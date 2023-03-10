@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
 
         val textView = findViewById<TextView>(R.id.textView)
 
-        repeat(1_000_000) {index -> // launch a lot of coroutines
+        repeat(1_000_000) {index -> // launch a lot of threads
             Thread {
                 val uiHandler = Handler(Looper.getMainLooper())
                 uiHandler.post {
